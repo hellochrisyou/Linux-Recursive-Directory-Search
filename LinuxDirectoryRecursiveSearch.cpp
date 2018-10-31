@@ -148,7 +148,7 @@ void List::print() {
 
 
 //recursive function
-void recursive(DIR * directory, struct dirent * directP,
+void Recursive(DIR * directory, struct dirent * directP,
                const char * pathname, List test) {
 
     bool isDirectory = false;
@@ -179,7 +179,7 @@ void recursive(DIR * directory, struct dirent * directP,
         }
         string newPathway = string(pathname) + "/" + directP -> d_name;
         z++;
-        recursive(directory, directP, newPathway.c_str(), test);
+        Recursive(directory, directP, newPathway.c_str(), test);
         return;
     }
 
